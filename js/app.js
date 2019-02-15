@@ -63,13 +63,16 @@ If the matchList has all the cards on the gameBoard, it declares winner. */
 function matchCards(openList){
   if(openList[0].children[0].classList.value==openList[1].children[0].classList.value){
       for (card of openList){
-        card.classList.add('match');
+        card.classList.add('match', 'flip');
         matchList.push(card);
         card.classList.remove('open', 'show');
       }
       openList.length=0; //Empties the openList so the clicking is allowed again
       if(matchList.length==16){
-        alert('You won');}
+        setTimeout(function () {
+          alert('You won');
+        }, 500);
+      }
   }
   else {
     for (card of openList){
@@ -82,4 +85,13 @@ function matchCards(openList){
       openList.length=0;
     }, 1000);
   }
+}
+
+let restart = document.querySelector('.restart');
+restart.addEventListener('click', function(){
+  gameStart();
+});
+
+function gameStart(){
+  location.reload(); //temporary soluton. Rewrite this function
 }
