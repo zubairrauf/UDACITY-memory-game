@@ -25,13 +25,14 @@ let moveCounter = 0; //To keep track of clicks
 let theDeck = document.querySelector('.deck');
 
 /************Starting the game*********/
-let startModal = document.querySelector('.start-modal');
+let startBox = document.querySelector('.start-box');
 let startBtn = document.querySelector('.start-button');
   startBtn.addEventListener('click', function(){
+    theDeck.classList.remove('hide');
     createCards();
     restartGame();
     startTimer();
-    startModal.classList.add('hide');
+    startBox.classList.add('hide');
 
   });
 
@@ -110,6 +111,7 @@ function matchCards(openList){
             card.classList.add('match', 'flip');
             card.classList.remove('open', 'show');
         }
+        // uiFeedback(matchList); //To manipulate the gradient
       openList.length=0; //Empties the openList so the clicking is allowed again
       if(matchList.length===16){
         setTimeout(function () {
@@ -233,3 +235,15 @@ function stopTimer(){
 function pad(n){
   return ('00' + n).substr(-2); //return the last two characters
 }
+
+/*************Background test** *****/
+// let background = 0;
+// let percentage = 0;
+// function uiFeedback(matchList){
+//   for (cards of matchList){
+//     background++;
+//     percentage = 100 - (background * 6.25);
+//     console.log(background);
+//     theDeck.style.background = `linear-gradient(lightgrey 0%, white 5%, skyblue 50%, orange ${percentage}%, lightgrey 100%)`;
+//   }
+// }

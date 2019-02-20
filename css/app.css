@@ -28,20 +28,58 @@ body {
     flex-direction: column;
 }
 
+header{
+  width: 100%;
+  background: #2e3d49;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 h1 {
+  color: white;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }
-
+.logo{
+  margin-left: 30px;
+}
+.logo img{
+  width: 50px;
+}
 /*
  * Styles for the deck of cards
  */
 
+ .start-box{
+   margin-top: 150px;
+   width: 400px;
+   background-color: #2e3d49;
+   border: solid 3px lightgrey;
+   color: white;
+   border-radius: 15px;
+   padding: 30px;
+ }
+ .start-heading{
+   font-size: 1.5rem;
+   padding-bottom: 10px;
+ }
+ .start-button{
+   width: 100%;
+   height: 2rem;
+   margin-top: 20px;
+ }
 .deck {
-    width: 660px;
-    min-height: 680px;
+    /* width: 660px; */
+    /* min-height: 680px; */
+    width: 90%;
+    max-width: 660px;
+    min-width: 280px;
+    height: 80vh;
+    min-height: 350px;
     background: linear-gradient(lightgrey 0%, white 5%, skyblue 50%, orange 80%, lightgrey 100%);
-    padding: 32px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
     display: flex;
@@ -52,8 +90,11 @@ h1 {
 }
 
 .deck .card {
-    height: 125px;
-    width: 125px;
+    max-height: 125px;
+    max-width: 125px;
+    height: 20%;
+    width: 20%;
+    margin: 5px;
     background: #2e3d49;
     font-size: 0;
     color: #ffffff;
@@ -113,10 +154,9 @@ h1 {
 .score-panel .restart {
     float: right;
     cursor: pointer;
+    transition: 0.2s;
 }
 
-.bar {
-  width: 1%;
-  height: 400px;
-  background-color: green;
+.score-panel .restart:hover {
+  transform: rotate(180deg) scale(1.5);
 }
