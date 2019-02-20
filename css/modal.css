@@ -1,0 +1,84 @@
+/* The Modal (background) */
+.result-modal,
+.start-modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  padding-top: 200px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transition: 160s;
+  background-color: rgba(0,0,0,0.4);
+}
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+/* Modal Content */
+.result-modal-content,
+.start-modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid #888;
+  border-radius: 15px;
+  width: 400px;
+  box-shadow: 0 4px 8px 0 black,0 6px 20px 0 black;
+}
+.win-icon{
+  width: 95%;
+}
+.win-icon img{
+  width: 150px;
+}
+.win-message{
+  width: 95%;
+  margin-top: -20px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+
+.win-heading,
+.start-heading{
+  font-size: 1.5rem;
+}
+.play-again{
+margin-top: 10px;
+margin-left: auto;
+margin-right: auto;
+width: 40%;
+height: 2rem;
+
+}
+.animate-modal-content{
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 1s;
+  animation-name: animatetop;
+  animation-duration: 1s
+}
+
+.start-button{
+  width: 40%;
+  height: 2rem;
+  margin-top: 10px;
+}
+/*Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}

@@ -104,8 +104,19 @@ h1 {
     list-style: none;
     display: inline-block;
 }
-
+.timer{
+  margin-left: 10px;
+}
+.hide-star{
+  display: none;
+}
 .score-panel .restart {
     float: right;
     cursor: pointer;
+}
+
+.bar {
+  width: 1%;
+  height: 400px;
+  background-color: green;
 }
