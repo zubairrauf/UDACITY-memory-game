@@ -175,7 +175,7 @@ function stars(){
   for (star of stars){
     star.classList.remove('hide-star') //Resets the hidden stars.
   }
-  if (moveCounter > 26 & moveCounter < 36){
+  if (moveCounter > 26 & moveCounter <= 36){
     stars[2].classList.add('hide-star');
   }
   else if (moveCounter >= 37){
