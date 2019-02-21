@@ -150,9 +150,7 @@ h1 {
 .timer{
   margin-left: 10px;
 }
-.hide-star{
-  display: none;
-}
+
 .score-panel .restart {
   display: inline;
     float: center;
@@ -184,7 +182,8 @@ h1 {
   display: block;
 }
 
-.hide {
+.hide,
+.hide-star {
   display: none;
 }
 /* Modal Content */
