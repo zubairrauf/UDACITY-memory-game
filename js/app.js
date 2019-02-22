@@ -1,24 +1,3 @@
-/*
- * Create a list that holds all of your cards
- */
-
- /*
-  * Display the cards on the page
-  *   - shuffle the list of cards using the provided "shuffle" method below
-  *   - loop through each card and create its HTML
-  *   - add each card's HTML to the page
-  */
-  /*
-   * set up the event listener for a card. If a card is clicked:
-   *  - display the card's symbol (put this functionality in another function that you call from this one)
-   *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
-   *  - if the list already has another card, check to see if the two cards match
-   *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
-   *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
-   *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
-   *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
-   */
-
 let openList = []; //to store the open cards
 let matchList = []; // to store the matched cards
 let moveCounter = 0; //To keep track of clicks
@@ -35,7 +14,6 @@ let startBtn = document.querySelector('.start-button');
     startBox.classList.add('hide');
 
   });
-
 
 
 /*********** Creating cards ********/
@@ -111,7 +89,6 @@ function matchCards(openList){
             card.classList.add('match', 'flip');
             card.classList.remove('open', 'show');
         }
-        // uiFeedback(matchList); //To manipulate the gradient
       openList.length=0; //Empties the openList so the clicking is allowed again
       if(matchList.length===16){
         setTimeout(function () {
@@ -173,7 +150,7 @@ function resetGame(){
 function stars(){
   let stars = document.querySelectorAll('.fa-star');
   for (star of stars){
-    star.classList.remove('hide') //Resets the hidden stars.
+    star.classList.remove('hide-star') //Resets the hidden stars.
   }
   if (moveCounter > 26 & moveCounter <= 36){
     stars[2].classList.add('hide-star');
@@ -235,15 +212,3 @@ function stopTimer(){
 function pad(n){
   return ('00' + n).substr(-2); //return the last two characters
 }
-
-/*************Background test** *****/
-// let background = 0;
-// let percentage = 0;
-// function uiFeedback(matchList){
-//   for (cards of matchList){
-//     background++;
-//     percentage = 100 - (background * 6.25);
-//     console.log(background);
-//     theDeck.style.background = `linear-gradient(lightgrey 0%, white 5%, skyblue 50%, orange ${percentage}%, lightgrey 100%)`;
-//   }
-// }
