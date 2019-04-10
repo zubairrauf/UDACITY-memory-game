@@ -16,4 +16,4 @@ You have three stars when you start the game. If you complete the game in 26 or 
 If the total number of clicks is between 27 and 36, you will get two stars. For more than 36 clicks, you will get one star.
 
 ## Contact
-You can contact me at mail@zubairrauf.com
+You can contact me at zubair@zubairrauf.com
