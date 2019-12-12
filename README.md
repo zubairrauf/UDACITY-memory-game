@@ -4,6 +4,7 @@
 
 * [Instructions](#instructions)
 * [Stars](#stars)
+* [URL](#url)
 * [Contact](#contact)
 
 ## Instructions
@@ -14,6 +15,9 @@ as possible.
 ## Stars
 You have three stars when you start the game. If you complete the game in 26 or fewer clicks, you get the three star rating.
 If the total number of clicks is between 27 and 36, you will get two stars. For more than 36 clicks, you will get one star.
+
+## URL
+You can play the game at https://zubairrauf.com/projects/memorygame/
 
 ## Contact
 You can contact me at zubair@zubairrauf.com
